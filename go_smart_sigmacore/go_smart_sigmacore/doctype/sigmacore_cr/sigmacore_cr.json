@@ -1,0 +1,235 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2026-02-25 17:35:46.231365",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "cr_indetification_tab",
+  "section_break_ttec",
+  "amended_from",
+  "title",
+  "requestor",
+  "column_break_xtyy",
+  "status",
+  "priority",
+  "column_break_anfh",
+  "site",
+  "section_break_fzxp",
+  "analysts_by",
+  "notes",
+  "requirement_and_acceptance_criteria_tab",
+  "scopes",
+  "requirements_description",
+  "requirments",
+  "description",
+  "uat",
+  "acceptance_criteria",
+  "technical_assessment_tab",
+  "feasible_status",
+  "column_break_yzvy",
+  "estimated_time",
+  "section_break_utym",
+  "not_applicable_requirements",
+  "cr_preview_tab",
+  "cr_preview",
+  "pdf_tab",
+  "cr_pdf"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_ttec",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "SigmaCore CR",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "title",
+   "fieldtype": "Data",
+   "label": "Title"
+  },
+  {
+   "fieldname": "column_break_xtyy",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "site",
+   "fieldtype": "Link",
+   "label": "Site",
+   "options": "SigmaCore Site"
+  },
+  {
+   "fieldname": "cr_indetification_tab",
+   "fieldtype": "Tab Break",
+   "label": "CR Indetification"
+  },
+  {
+   "fieldname": "priority",
+   "fieldtype": "Select",
+   "label": "Priority",
+   "options": "Low\nMedium\nHigh\nCritical"
+  },
+  {
+   "fieldname": "section_break_fzxp",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "requirments",
+   "fieldtype": "Table",
+   "label": "Requirments",
+   "options": "SigmaCore CR Requirement",
+   "reqd": 1
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Small Text",
+   "label": "Notes"
+  },
+  {
+   "fieldname": "analysts_by",
+   "fieldtype": "Table",
+   "label": "Analyst(s) By",
+   "options": "SigmaCore User Child Table"
+  },
+  {
+   "fieldname": "technical_assessment_tab",
+   "fieldtype": "Tab Break",
+   "label": "Technical Assessment"
+  },
+  {
+   "fieldname": "requestor",
+   "fieldtype": "Data",
+   "label": "Requestor"
+  },
+  {
+   "fieldname": "requirement_and_acceptance_criteria_tab",
+   "fieldtype": "Tab Break",
+   "label": "Requirements and Acceptance Criteria"
+  },
+  {
+   "fieldname": "scopes",
+   "fieldtype": "Table",
+   "label": "Scopes",
+   "options": "SigmaCore Module Scope Child Table",
+   "reqd": 1
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "requirements_description",
+   "fieldtype": "Section Break",
+   "label": "Requirements & Description"
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Text Editor",
+   "in_list_view": 1,
+   "label": "Description",
+   "reqd": 1
+  },
+  {
+   "fieldname": "uat",
+   "fieldtype": "Section Break",
+   "label": "UAT"
+  },
+  {
+   "fieldname": "acceptance_criteria",
+   "fieldtype": "Table",
+   "label": "Acceptance Criteria",
+   "options": "SigmaCore Acceptance Criteria Child Table"
+  },
+  {
+   "fieldname": "cr_preview_tab",
+   "fieldtype": "Tab Break",
+   "label": "CR Preview"
+  },
+  {
+   "fieldname": "cr_preview",
+   "fieldtype": "HTML",
+   "label": "CR Preview"
+  },
+  {
+   "fieldname": "pdf_tab",
+   "fieldtype": "Tab Break",
+   "label": "PDF"
+  },
+  {
+   "fieldname": "cr_pdf",
+   "fieldtype": "HTML",
+   "label": "CR PDF"
+  },
+  {
+   "fieldname": "feasible_status",
+   "fieldtype": "Select",
+   "label": "Feasible Status ",
+   "options": "Feasible\nFeasible with Limitations\nNot Feasible"
+  },
+  {
+   "depends_on": "eval:doc.feasible_status === \"Feasible with Limitations\"",
+   "fieldname": "not_applicable_requirements",
+   "fieldtype": "Table",
+   "label": "Not Applicable Requirements ",
+   "options": "SigmaCore CR Feasibility Status"
+  },
+  {
+   "fieldname": "column_break_yzvy",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "estimated_time",
+   "fieldtype": "Duration",
+   "hide_seconds": 1,
+   "label": "Estimated Time"
+  },
+  {
+   "fieldname": "section_break_utym",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_anfh",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Backlog\nUnder Technical Review\nPending Approval\nApproved\nRejected\nIn Progress\nIn Test Env\nClosed\nCancelled"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2026-03-08 09:01:30.677303",
+ "modified_by": "Administrator",
+ "module": "Go-Smart SigmaCore",
+ "name": "SigmaCore CR",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

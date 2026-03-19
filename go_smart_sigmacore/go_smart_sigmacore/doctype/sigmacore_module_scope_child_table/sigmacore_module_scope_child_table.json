@@ -1,0 +1,52 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2026-02-25 21:37:07.617506",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "module_name",
+  "section",
+  "target"
+ ],
+ "fields": [
+  {
+   "fieldname": "module_name",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Module Name",
+   "options": "SigmaCore Module",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Section",
+   "options": "SigmaCore Module",
+   "reqd": 1
+  },
+  {
+   "fieldname": "target",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Target",
+   "options": "SigmaCore Module"
+  }
+ ],
+ "grid_page_length": 7,
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2026-03-09 23:38:58.299472",
+ "modified_by": "Administrator",
+ "module": "Go-Smart SigmaCore",
+ "name": "SigmaCore Module Scope Child Table",
+ "owner": "Administrator",
+ "permissions": [],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
