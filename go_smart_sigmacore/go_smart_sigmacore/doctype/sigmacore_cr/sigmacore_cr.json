@@ -31,6 +31,11 @@
   "estimated_time",
   "section_break_utym",
   "not_applicable_requirements",
+  "section_break_jgkk",
+  "module_lead_approval",
+  "modules_manager_approval",
+  "column_break_zbgj",
+  "column_break_rtte",
   "cr_preview_tab",
   "cr_preview",
   "pdf_tab",
@@ -176,7 +181,7 @@
    "fieldname": "not_applicable_requirements",
    "fieldtype": "Table",
    "label": "Not Applicable Requirements ",
-   "options": "SigmaCore CR Feasibility Status"
+   "options": "SigmaCore CR Requirement"
   },
   {
    "fieldname": "column_break_yzvy",
@@ -201,13 +206,37 @@
    "fieldtype": "Select",
    "label": "Status",
    "options": "Backlog\nUnder Technical Review\nPending Approval\nApproved\nRejected\nIn Progress\nIn Test Env\nClosed\nCancelled"
+  },
+  {
+   "fieldname": "section_break_jgkk",
+   "fieldtype": "Section Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "module_lead_approval",
+   "fieldtype": "Check",
+   "label": "Module Lead Approval"
+  },
+  {
+   "fieldname": "column_break_zbgj",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_rtte",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "modules_manager_approval",
+   "fieldtype": "Check",
+   "label": "Modules Manager Approval"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2026-03-08 09:01:30.677303",
+ "modified": "2026-03-20 01:39:25.880673",
  "modified_by": "Administrator",
  "module": "Go-Smart SigmaCore",
  "name": "SigmaCore CR",
