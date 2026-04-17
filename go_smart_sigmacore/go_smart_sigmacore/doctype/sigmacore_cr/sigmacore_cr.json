@@ -1,6 +1,7 @@
 {
  "actions": [],
  "allow_rename": 1,
+ "autoname": "format:CR-{MM}-{YY}-{#####}",
  "creation": "2026-02-25 17:35:46.231365",
  "doctype": "DocType",
  "engine": "InnoDB",
@@ -24,7 +25,7 @@
   "requirments",
   "description",
   "uat",
-  "acceptance_criteria",
+  "user_story",
   "technical_assessment_tab",
   "feasible_status",
   "column_break_yzvy",
@@ -107,6 +108,7 @@
   {
    "fieldname": "technical_assessment_tab",
    "fieldtype": "Tab Break",
+   "hidden": 1,
    "label": "Technical Assessment"
   },
   {
@@ -117,7 +119,7 @@
   {
    "fieldname": "requirement_and_acceptance_criteria_tab",
    "fieldtype": "Tab Break",
-   "label": "Requirements and Acceptance Criteria"
+   "label": "Requirements and UAT"
   },
   {
    "fieldname": "scopes",
@@ -143,12 +145,6 @@
    "fieldname": "uat",
    "fieldtype": "Section Break",
    "label": "UAT"
-  },
-  {
-   "fieldname": "acceptance_criteria",
-   "fieldtype": "Table",
-   "label": "Acceptance Criteria",
-   "options": "SigmaCore Acceptance Criteria Child Table"
   },
   {
    "fieldname": "cr_preview_tab",
@@ -181,7 +177,7 @@
    "fieldname": "not_applicable_requirements",
    "fieldtype": "Table",
    "label": "Not Applicable Requirements ",
-   "options": "SigmaCore CR Requirement"
+   "options": "SigmaCore Not Applicable Requerment"
   },
   {
    "fieldname": "column_break_yzvy",
@@ -205,7 +201,8 @@
    "fieldname": "status",
    "fieldtype": "Select",
    "label": "Status",
-   "options": "Backlog\nUnder Technical Review\nPending Approval\nApproved\nRejected\nIn Progress\nIn Test Env\nClosed\nCancelled"
+   "options": "Backlog\nUnder Technical Review\nIn Progress\nIn Test Env\nClosed\nRejected",
+   "read_only": 1
   },
   {
    "fieldname": "section_break_jgkk",
@@ -230,19 +227,27 @@
    "fieldname": "modules_manager_approval",
    "fieldtype": "Check",
    "label": "Modules Manager Approval"
+  },
+  {
+   "fieldname": "user_story",
+   "fieldtype": "Table",
+   "label": "(User / Job) Story",
+   "options": "SigmaCore Acceptance Criteria Child Table"
   }
  ],
  "grid_page_length": 50,
- "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2026-03-20 01:39:25.880673",
+ "modified": "2026-04-10 19:13:11.049367",
  "modified_by": "Administrator",
  "module": "Go-Smart SigmaCore",
  "name": "SigmaCore CR",
+ "naming_rule": "Expression",
  "owner": "Administrator",
  "permissions": [
   {
+   "amend": 1,
+   "cancel": 1,
    "create": 1,
    "delete": 1,
    "email": 1,
@@ -257,8 +262,35 @@
   }
  ],
  "row_format": "Dynamic",
+ "show_title_field_in_link": 1,
  "sort_field": "modified",
  "sort_order": "DESC",
- "states": [],
+ "states": [
+  {
+   "color": "Red",
+   "title": "Backlog"
+  },
+  {
+   "color": "Yellow",
+   "title": "Under Technical Review"
+  },
+  {
+   "color": "Green",
+   "title": "In Progress"
+  },
+  {
+   "color": "Orange",
+   "title": "In Test Env"
+  },
+  {
+   "color": "Blue",
+   "title": "Closed"
+  },
+  {
+   "color": "Gray",
+   "title": "Rejected"
+  }
+ ],
+ "title_field": "title",
  "track_changes": 1
 }

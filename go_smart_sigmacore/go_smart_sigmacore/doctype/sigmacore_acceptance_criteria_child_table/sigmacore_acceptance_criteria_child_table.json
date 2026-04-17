@@ -6,30 +6,46 @@
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "condition",
+  "as_a",
+  "i_want_to",
+  "so_i_can",
   "status"
  ],
  "fields": [
-  {
-   "fieldname": "condition",
-   "fieldtype": "Data",
-   "in_list_view": 1,
-   "label": "Condition",
-   "reqd": 1
-  },
   {
    "fieldname": "status",
    "fieldtype": "Select",
    "in_list_view": 1,
    "label": "Status",
    "options": "\nPassed\nPartially Passed\nFailed"
+  },
+  {
+   "fieldname": "as_a",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "As a / When",
+   "reqd": 1
+  },
+  {
+   "fieldname": "i_want_to",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "I Want To",
+   "reqd": 1
+  },
+  {
+   "fieldname": "so_i_can",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "So I Can",
+   "reqd": 1
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2026-03-06 23:21:56.660359",
+ "modified": "2026-04-10 16:33:08.060891",
  "modified_by": "Administrator",
  "module": "Go-Smart SigmaCore",
  "name": "SigmaCore Acceptance Criteria Child Table",

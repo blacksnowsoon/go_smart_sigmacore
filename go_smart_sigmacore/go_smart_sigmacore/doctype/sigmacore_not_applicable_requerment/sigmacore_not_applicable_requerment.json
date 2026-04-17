@@ -1,38 +1,37 @@
 {
  "actions": [],
- "autoname": "format:{####}-{requirement}",
- "creation": "2026-03-06 23:53:32.429279",
+ "allow_rename": 1,
+ "creation": "2026-03-20 02:33:42.353058",
  "doctype": "DocType",
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "requirement",
+  "reqierment",
   "note"
  ],
  "fields": [
   {
-   "fieldname": "requirement",
-   "fieldtype": "Data",
+   "fieldname": "reqierment",
+   "fieldtype": "Link",
    "in_list_view": 1,
-   "label": "Requirement",
+   "label": "Reqierment",
+   "options": "SigmaCore CR Requirement",
    "reqd": 1
   },
   {
    "fieldname": "note",
    "fieldtype": "Small Text",
-   "in_list_view": 1,
    "label": "Note"
   }
  ],
- "grid_page_length": 20,
+ "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2026-03-20 02:44:32.390582",
+ "modified": "2026-03-20 02:35:08.156928",
  "modified_by": "Administrator",
  "module": "Go-Smart SigmaCore",
- "name": "SigmaCore CR Requirement",
- "naming_rule": "Expression",
+ "name": "SigmaCore Not Applicable Requerment",
  "owner": "Administrator",
  "permissions": [],
  "row_format": "Dynamic",
