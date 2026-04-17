@@ -8,3 +8,15 @@ from frappe import _
 
 class SigmaCoreCR(Document):
 	pass
+
+
+@frappe.whitelist()
+def get_cr_preview(docname):
+	"""Render the CR preview Jinja template and return the HTML."""
+	doc = frappe.get_doc("SigmaCore CR", docname)
+	doc.check_permission("read")
+
+	return frappe.render_template(
+		"templates/sigmacore_cr_preview.html",
+		{"doc": doc},
+	)

@@ -1,0 +1,189 @@
+<style>
+	.sc-preview-wrapper {
+		font-family: var(--font-stack, 'Inter', sans-serif);
+		padding: 24px 28px;
+		color: var(--text-color, #1a1a2e);
+	}
+	.sc-cr-header {
+		display: flex;
+		align-items: flex-start;
+		justify-content: space-between;
+		margin-bottom: 28px;
+		padding-bottom: 18px;
+		border-bottom: 2px solid var(--border-color, #e2e8f0);
+	}
+	.sc-cr-title {
+		font-size: 1.6rem;
+		font-weight: 700;
+		color: var(--heading-color, #1e3a5f);
+		margin: 0 0 6px;
+	}
+	.sc-cr-meta {
+		font-size: 0.82rem;
+		color: var(--text-muted, #64748b);
+		display: flex;
+		gap: 18px;
+		flex-wrap: wrap;
+	}
+	.sc-cr-meta span { display: flex; align-items: center; gap: 4px; }
+	.sc-status-badge {
+		display: inline-block;
+		padding: 3px 12px;
+		border-radius: 999px;
+		font-size: 0.78rem;
+		font-weight: 600;
+		background: var(--primary-color, #4f46e5);
+		color: #fff;
+	}
+	.rejected {background: #f52e14;}
+	.in-progress {background: #0cb932;}
+	.closed {background: #575a58;}
+	.backlog {background: #1490f5;}
+	.sc-section { margin-bottom: 28px; }
+	.sc-section-title {
+		font-size: 1.3rem;
+		font-weight: 700;
+		letter-spacing: 0.12em;
+		text-transform: uppercase;
+		color: var(--text-muted, #596370);
+		margin-bottom: 10px;
+	}
+	.sc-analysts-list { display: flex; flex-wrap: wrap; gap: 8px; }
+	.sc-analyst-badge {
+		background: var(--bg-blue-light, #eff6ff);
+		color: var(--blue-500, #3b82f6);
+		border: 1px solid var(--blue-200, #bfdbfe);
+		border-radius: 999px;
+		padding: 4px 14px;
+		font-size: 0.85rem;
+		font-weight: 500;
+	}
+	.sc-scopes-list { display: flex; flex-direction: column; gap: 6px; }
+	.sc-scope-row {
+		background: var(--control-bg, #f8fafc);
+		border: 1px solid var(--border-color, #e2e8f0);
+		border-radius: 6px;
+		padding: 8px 14px;
+		font-size: 0.88rem;
+		color: var(--text-color, #334155);
+	}
+	.sc-sep { color: var(--text-muted, #94a3b8); margin: 0 6px; }
+	.sc-requirement-block {
+		border-left: 3px solid var(--primary-color, #4f46e5);
+		padding: 10px 16px;
+		margin-bottom: 16px;
+		background: var(--control-bg, #f8fafc);
+		border-radius: 0 6px 6px 0;
+	}
+	.sc-req-title {
+		font-size: 1rem;
+		font-weight: 600;
+		color: var(--heading-color, #1e3a5f);
+		margin: 0 0 6px;
+	}
+	.sc-req-note {
+		font-size: 0.875rem;
+		color: var(--text-color, #475569);
+		margin: 0;
+		white-space: pre-wrap;
+	}
+	.sc-uat-content {
+		font-size: 0.875rem;
+		color: var(--text-color, #475569);
+		font-weight: 600;
+	}
+</style>
+
+<div class="sc-preview-wrapper">
+
+	{# ── Header ─────────────────────────────────────────────── #}
+	<div class="sc-cr-header">
+		<div>
+			<h1 class="sc-cr-title">{{ doc.title or doc.name or "—" }}</h1>
+			<div class="sc-cr-meta">
+				<span>📋 {{ doc.name }}</span>
+				{% if doc.requestor %}<span>👤 {{ doc.requestor }}</span>{% endif %}
+				{% if doc.priority %}<span>
+					{% if doc.priority == "High" %}
+						🔺 
+					{% elif doc.priority == "Medium" %}
+						🟠 
+					{% elif doc.priority == "Low" %}
+						🟢 
+					{% elif doc.priority == "Critical" %}
+						🔴 
+					{% endif %}
+					{{ doc.priority }}</span>{% endif %}
+				{% if doc.site %}<span>🏢 {{ frappe.get_doc("SigmaCore Site", doc.site).site_name }}</span>{% endif %}
+			</div>
+		</div>
+		{% if doc.status %}
+		<div><span class="sc-status-badge {{ doc.status.lower().replace(' ', '-') }}">{{ doc.status }}</span></div>
+		{% endif %}
+	</div>
+	{# ── Notes ────────────────────────────────────────────── #}
+	{% if doc.notes %}
+	<div class="sc-section">
+		<div class="sc-section-title">{{ _("Notes") }}</div>
+		<div class="sc-notes-list">
+			<span class="sc-note-badge">{{ doc.notes or doc.notes or "—" }}</span>
+		</div>
+	</div>
+	{% endif %}
+	{# ── Analysts ────────────────────────────────────────────── #}
+	{% if doc.analysts_by %}
+	<div class="sc-section">
+		<div class="sc-section-title">Analyst(s)</div>
+		<div class="sc-analysts-list">
+			{% for row in doc.analysts_by %}
+			<span class="sc-analyst-badge">{{ row.analyst_name or row.analyst or "—" }}</span>
+			{% endfor %}
+		</div>
+	</div>
+	{% endif %}
+
+	{# ── Scopes ──────────────────────────────────────────────── #}
+	{% if doc.scopes %}
+	<div class="sc-section">
+		<div class="sc-section-title"># {{ _("Scopes") }}</div>
+		<div class="sc-scopes-list">
+			{% for row in doc.scopes %}
+			<div class="sc-scope-row">
+				{% set parts = [] %}
+				{% if row.module_name %}{% set _ = parts.append(row.module_name) %}{% endif %}
+				{% if row.section %}{% set _ = parts.append(row.section) %}{% endif %}
+				{% if row.target %}{% set _ = parts.append(row.target) %}{% endif %}
+				{{ parts | join(' / ') }}
+			</div>
+			{% endfor %}
+		</div>
+	</div>
+	{% endif %}
+
+	{# ── Requirements ────────────────────────────────────────── #}
+	{% if doc.requirments %}
+	<div class="sc-section">
+		<div class="sc-section-title"># {{ _("Requirements") }}</div>
+		{% for row in doc.requirments %}
+		<div class="sc-requirement-block">
+			{% if row.requirement %}<h2 class="sc-req-title">{{ row.requirement }}</h2>{% endif %}
+			{% if row.note %}<p class="sc-req-note">{{ row.note }}</p>{% endif %}
+		</div>
+		{% endfor %}
+	</div>
+	{% endif %}
+
+	{# ── UAT ────────────────────────────────────────── #}
+	{% if doc.user_story %}
+	<div class="sc-section">
+		<div class="sc-section-title"># {{ _("User Story") }}</div>
+		{% for row in doc.user_story %}
+		<div class="sc-scope-row">
+			{% if row.as_a %} <span style="color: #f52e14;">As</span> <span class="sc-uat-content">{{ row.as_a }}</span>{% endif %}
+			{% if row.i_want_to %} <span style="color: #f52e14;">I want to</span> <span class="sc-uat-content">{{ row.i_want_to }}</span>{% endif %}
+			{% if row.so_i_can %} <span style="color: #f52e14;">So that</span> <span class="sc-uat-content">{{ row.so_i_can }}</span>{% endif %}
+		</div>
+		{% endfor %}
+	</div>
+	{% endif %}
+</div>
