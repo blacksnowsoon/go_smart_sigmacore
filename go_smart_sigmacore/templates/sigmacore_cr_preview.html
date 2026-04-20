@@ -100,6 +100,9 @@
 	<div class="sc-cr-header">
 		<div>
 			<h1 class="sc-cr-title">{{ doc.title or doc.name or "—" }}</h1>
+			<h3 style="margin-top: 0; color: #0a53a7dc; border-bottom: 2px solid #1a73e8; padding-bottom: 10px;">
+				<i class="fa fa-eye"></i> {{ _('Preview') }}
+			</h3>
 			<div class="sc-cr-meta">
 				<span>📋 {{ doc.name }}</span>
 				{% if doc.requestor %}<span>👤 {{ doc.requestor }}</span>{% endif %}
@@ -118,7 +121,7 @@
 			</div>
 		</div>
 		{% if doc.status %}
-		<div><span class="sc-status-badge {{ doc.status.lower().replace(' ', '-') }}">{{ doc.status }}</span></div>
+		<div><span class="sc-status-badge {{ doc.status.lower().replace(' ', '-') }}">{{ _(doc.status) }}</span></div>
 		{% endif %}
 	</div>
 	{# ── Notes ────────────────────────────────────────────── #}
@@ -133,7 +136,7 @@
 	{# ── Analysts ────────────────────────────────────────────── #}
 	{% if doc.analysts_by %}
 	<div class="sc-section">
-		<div class="sc-section-title">Analyst(s)</div>
+		<div class="sc-section-title"># {{ _("Analyst(s) By") }}</div>
 		<div class="sc-analysts-list">
 			{% for row in doc.analysts_by %}
 			<span class="sc-analyst-badge">{{ row.analyst_name or row.analyst or "—" }}</span>
@@ -172,16 +175,37 @@
 		{% endfor %}
 	</div>
 	{% endif %}
-
-	{# ── UAT ────────────────────────────────────────── #}
+	{# ── Description ────────────────────────────────────────── #}
+	{% if doc.description %}
+	<div class="sc-section">
+		<div class="sc-section-title"># {{ _("Description") }}</div>
+		<div>
+			{{ doc.description}}
+		</div>
+	</div>
+	{% endif %}
+	{# ── User Story ────────────────────────────────────────── #}
 	{% if doc.user_story %}
 	<div class="sc-section">
 		<div class="sc-section-title"># {{ _("User Story") }}</div>
 		{% for row in doc.user_story %}
 		<div class="sc-scope-row">
-			{% if row.as_a %} <span style="color: #f52e14;">As</span> <span class="sc-uat-content">{{ row.as_a }}</span>{% endif %}
-			{% if row.i_want_to %} <span style="color: #f52e14;">I want to</span> <span class="sc-uat-content">{{ row.i_want_to }}</span>{% endif %}
-			{% if row.so_i_can %} <span style="color: #f52e14;">So that</span> <span class="sc-uat-content">{{ row.so_i_can }}</span>{% endif %}
+			{% if row.as_a %} <span style="color: #f52e14;">{{ _("As a") }}</span> <span class="sc-uat-content">{{ row.as_a }}</span>{% endif %}
+			{% if row.i_want_to %} <span style="color: #f52e14;">{{ _("I want to")}}</span> <span class="sc-uat-content">{{ row.i_want_to }}</span>{% endif %}
+			{% if row.so_i_can %} <span style="color: #f52e14;">{{ _("So")}}</span> <span class="sc-uat-content">{{ row.so_i_can }}</span>{% endif %}
+		</div>
+		{% endfor %}
+	</div>
+	{% endif %}
+	{# ── Job Story ────────────────────────────────────────── #}
+	{% if doc.job_story %}
+	<div class="sc-section">
+		<div class="sc-section-title"># {{ _("Job Story") }}</div>
+		{% for row in doc.job_story %}
+		<div class="sc-scope-row">
+			{% if row.as_a %} <span style="color: #f52e14;">{{ _("When") }}</span> <span class="sc-uat-content">{{ row.as_a }}</span>{% endif %}
+			{% if row.i_want_to %} <span style="color: #f52e14;">{{ _("Then")}}</span> <span class="sc-uat-content">{{ row.i_want_to }}</span>{% endif %}
+			{% if row.so_i_can %} <span style="color: #f52e14;">{{ _("So")}}</span> <span class="sc-uat-content">{{ row.so_i_can }}</span>{% endif %}
 		</div>
 		{% endfor %}
 	</div>

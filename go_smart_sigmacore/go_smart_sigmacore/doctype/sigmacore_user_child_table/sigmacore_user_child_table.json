@@ -15,7 +15,7 @@
    "fieldname": "analyst",
    "fieldtype": "Link",
    "in_list_view": 1,
-   "label": "Analyst",
+   "label": "Email",
    "options": "User",
    "reqd": 1
   },
@@ -28,7 +28,7 @@
    "fieldname": "analyst_name",
    "fieldtype": "Data",
    "in_list_view": 1,
-   "label": "analyst Name",
+   "label": "Author Name",
    "read_only": 1
   }
  ],
@@ -36,7 +36,7 @@
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2026-03-08 09:12:38.868740",
+ "modified": "2026-04-17 21:50:11.721753",
  "modified_by": "Administrator",
  "module": "Go-Smart SigmaCore",
  "name": "SigmaCore User Child Table",

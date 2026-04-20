@@ -3,19 +3,21 @@
  "allow_rename": 1,
  "autoname": "format:CR-{MM}-{YY}-{#####}",
  "creation": "2026-02-25 17:35:46.231365",
+ "default_view": "List",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
   "cr_indetification_tab",
   "section_break_ttec",
   "amended_from",
-  "title",
+  "site",
   "requestor",
   "column_break_xtyy",
   "status",
   "priority",
-  "column_break_anfh",
-  "site",
+  "column_break_ajht",
+  "section_break_uulx",
+  "title",
   "section_break_fzxp",
   "analysts_by",
   "notes",
@@ -26,6 +28,7 @@
   "description",
   "uat",
   "user_story",
+  "job_story",
   "technical_assessment_tab",
   "feasible_status",
   "column_break_yzvy",
@@ -75,7 +78,7 @@
   {
    "fieldname": "cr_indetification_tab",
    "fieldtype": "Tab Break",
-   "label": "CR Indetification"
+   "label": "CR Identification"
   },
   {
    "fieldname": "priority",
@@ -114,7 +117,7 @@
   {
    "fieldname": "requestor",
    "fieldtype": "Data",
-   "label": "Requestor"
+   "label": "Requested By"
   },
   {
    "fieldname": "requirement_and_acceptance_criteria_tab",
@@ -154,6 +157,7 @@
   {
    "fieldname": "cr_preview",
    "fieldtype": "HTML",
+   "is_virtual": 1,
    "label": "CR Preview"
   },
   {
@@ -164,6 +168,7 @@
   {
    "fieldname": "cr_pdf",
    "fieldtype": "HTML",
+   "is_virtual": 1,
    "label": "CR PDF"
   },
   {
@@ -192,10 +197,6 @@
   {
    "fieldname": "section_break_utym",
    "fieldtype": "Section Break"
-  },
-  {
-   "fieldname": "column_break_anfh",
-   "fieldtype": "Column Break"
   },
   {
    "fieldname": "status",
@@ -231,14 +232,28 @@
   {
    "fieldname": "user_story",
    "fieldtype": "Table",
-   "label": "(User / Job) Story",
+   "label": "User Story",
    "options": "SigmaCore Acceptance Criteria Child Table"
+  },
+  {
+   "fieldname": "job_story",
+   "fieldtype": "Table",
+   "label": "Job Story",
+   "options": "SigmaCore Job Story Child Table"
+  },
+  {
+   "fieldname": "section_break_uulx",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_ajht",
+   "fieldtype": "Column Break"
   }
  ],
  "grid_page_length": 50,
  "is_submittable": 1,
  "links": [],
- "modified": "2026-04-10 19:13:11.049367",
+ "modified": "2026-04-19 13:17:36.976654",
  "modified_by": "Administrator",
  "module": "Go-Smart SigmaCore",
  "name": "SigmaCore CR",

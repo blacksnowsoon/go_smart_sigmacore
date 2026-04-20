@@ -6,7 +6,8 @@
  "engine": "InnoDB",
  "field_order": [
   "site_name",
-  "column_break_qykl"
+  "column_break_qykl",
+  "system_version"
  ],
  "fields": [
   {
@@ -19,12 +20,17 @@
   {
    "fieldname": "column_break_qykl",
    "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "system_version",
+   "fieldtype": "Data",
+   "label": "System Version"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-02-25 18:42:07.517787",
+ "modified": "2026-04-19 11:44:10.080865",
  "modified_by": "Administrator",
  "module": "Go-Smart SigmaCore",
  "name": "SigmaCore Site",
