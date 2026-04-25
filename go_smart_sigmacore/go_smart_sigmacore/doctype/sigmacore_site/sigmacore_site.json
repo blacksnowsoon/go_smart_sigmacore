@@ -6,8 +6,10 @@
  "engine": "InnoDB",
  "field_order": [
   "site_name",
+  "co_system_changes",
   "column_break_qykl",
-  "system_version"
+  "system_version",
+  "project_manager"
  ],
  "fields": [
   {
@@ -25,12 +27,22 @@
    "fieldname": "system_version",
    "fieldtype": "Data",
    "label": "System Version"
+  },
+  {
+   "fieldname": "co_system_changes",
+   "fieldtype": "Data",
+   "label": "CO of System Changes"
+  },
+  {
+   "fieldname": "project_manager",
+   "fieldtype": "Data",
+   "label": "Project Manager"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-04-19 11:44:10.080865",
+ "modified": "2026-04-21 10:51:22.669063",
  "modified_by": "Administrator",
  "module": "Go-Smart SigmaCore",
  "name": "SigmaCore Site",

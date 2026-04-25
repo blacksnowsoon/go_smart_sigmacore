@@ -92,6 +92,78 @@
 		color: var(--text-color, #475569);
 		font-weight: 600;
 	}
+	
+	/* Responsive Card Grid */
+	.sc-cards-grid {
+		display: grid;
+		gap: 20px;
+		grid-template-columns: 1fr;
+		margin-bottom: 28px;
+	}
+	
+	@media (min-width: 768px) {
+		.sc-cards-grid {
+			grid-template-columns: repeat(2, 1fr);
+		}
+	}
+	
+	@media (min-width: 1024px) {
+		.sc-cards-grid {
+			grid-template-columns: repeat(3, 1fr);
+		}
+	}
+	
+	.sc-card {
+		border: 2px solid var(--border-color, #e2e8f0);
+		border-radius: 8px;
+		padding: 18px;
+		background: var(--control-bg, #f8fafc);
+		display: flex;
+		flex-direction: column;
+		height: 100%;
+		transition: all 0.3s ease;
+		box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+	}
+	
+	.sc-card:hover {
+		border-color: var(--primary-color, #4f46e5);
+		box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+		transform: translateY(-2px);
+	}
+	
+	.sc-card-label {
+		display: inline-block;
+		font-size: 0.75rem;
+		font-weight: 700;
+		letter-spacing: 0.08em;
+		
+		padding: 4px 10px;
+		border-radius: 4px;
+		margin-bottom: 8px;
+		width: fit-content;
+	}
+	
+	.sc-card-label.as-a {
+		background: #fee2e2;
+		color: #991b1b;
+	}
+	
+	.sc-card-label.i-want-to {
+		background: #fef3c7;
+		color: #92400e;
+	}
+	
+	.sc-card-label.so-i-can {
+		background: #dbeafe;
+		color: #0c2340;
+	}
+	/* 2026-614-1-185472 */
+	.sc-card-content {
+		font-size: 0.95rem;
+		color: var(--text-color, #475569);
+		line-height: 1.5;
+		flex-grow: 1;
+	}
 </style>
 
 <div class="sc-preview-wrapper">
@@ -188,26 +260,60 @@
 	{% if doc.user_story %}
 	<div class="sc-section">
 		<div class="sc-section-title"># {{ _("User Story") }}</div>
-		{% for row in doc.user_story %}
-		<div class="sc-scope-row">
-			{% if row.as_a %} <span style="color: #f52e14;">{{ _("As a") }}</span> <span class="sc-uat-content">{{ row.as_a }}</span>{% endif %}
-			{% if row.i_want_to %} <span style="color: #f52e14;">{{ _("I want to")}}</span> <span class="sc-uat-content">{{ row.i_want_to }}</span>{% endif %}
-			{% if row.so_i_can %} <span style="color: #f52e14;">{{ _("So")}}</span> <span class="sc-uat-content">{{ row.so_i_can }}</span>{% endif %}
+		<div class="sc-cards-grid">
+			{% for row in doc.user_story %}
+			<div class="sc-card">
+				{% if row.as_a %}
+				<div>
+					<span class="sc-card-label as-a">{{ _("As a") }}</span>
+					<p class="sc-card-content">{{ row.as_a }}</p>
+				</div>
+				{% endif %}
+				{% if row.i_want_to %}
+				<div>
+					<span class="sc-card-label i-want-to">{{ _("I Want To") }}</span>
+					<p class="sc-card-content">{{ row.i_want_to }}</p>
+				</div>
+				{% endif %}
+				{% if row.so_i_can %}
+				<div>
+					<span class="sc-card-label so-i-can">{{ _("So I Can") }}</span>
+					<p class="sc-card-content">{{ row.so_i_can }}</p>
+				</div>
+				{% endif %}
+			</div>
+			{% endfor %}
 		</div>
-		{% endfor %}
 	</div>
 	{% endif %}
 	{# ── Job Story ────────────────────────────────────────── #}
 	{% if doc.job_story %}
 	<div class="sc-section">
 		<div class="sc-section-title"># {{ _("Job Story") }}</div>
-		{% for row in doc.job_story %}
-		<div class="sc-scope-row">
-			{% if row.as_a %} <span style="color: #f52e14;">{{ _("When") }}</span> <span class="sc-uat-content">{{ row.as_a }}</span>{% endif %}
-			{% if row.i_want_to %} <span style="color: #f52e14;">{{ _("Then")}}</span> <span class="sc-uat-content">{{ row.i_want_to }}</span>{% endif %}
-			{% if row.so_i_can %} <span style="color: #f52e14;">{{ _("So")}}</span> <span class="sc-uat-content">{{ row.so_i_can }}</span>{% endif %}
+		<div class="sc-cards-grid">
+			{% for row in doc.job_story %}
+			<div class="sc-card">
+				{% if row.when %}
+				<div>
+					<span class="sc-card-label as-a">{{ _("When") }}</span>
+					<p class="sc-card-content">{{ row.when }}</p>
+				</div>
+				{% endif %}
+				{% if row.then %}
+				<div>
+					<span class="sc-card-label i-want-to">{{ _("Then") }}</span>
+					<p class="sc-card-content">{{ row.then }}</p>
+				</div>
+				{% endif %}
+				{% if row.so %}
+				<div>
+					<span class="sc-card-label so-i-can">{{ _("So") }}</span>
+					<p class="sc-card-content">{{ row.so }}</p>
+				</div>
+				{% endif %}
+			</div>
+			{% endfor %}
 		</div>
-		{% endfor %}
 	</div>
 	{% endif %}
 </div>

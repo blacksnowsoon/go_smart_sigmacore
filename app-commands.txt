@@ -1,0 +1,2 @@
+#  Force a fresh build (This is more powerful than a simple restart)
+bench build --app go_smart_sigmacore --force

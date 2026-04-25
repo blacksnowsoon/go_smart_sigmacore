@@ -10,10 +10,12 @@
   "section_break_ybxj",
   "amended_from",
   "title",
+  "bug_category",
   "column_break_vbyq",
-  "priority",
-  "column_break_jpsp",
   "site",
+  "priority",
+  "section_break_zakf",
+  "impact_area",
   "section_break_jzgx",
   "details",
   "report_preview_tab",
@@ -63,16 +65,12 @@
   {
    "fieldname": "report_preview_tab",
    "fieldtype": "Tab Break",
-   "label": "Report Preview"
+   "label": "Preview"
   },
   {
    "fieldname": "pdf_tab",
    "fieldtype": "Tab Break",
    "label": "PDF"
-  },
-  {
-   "fieldname": "column_break_jpsp",
-   "fieldtype": "Column Break"
   },
   {
    "fieldname": "site",
@@ -85,11 +83,13 @@
   {
    "fieldname": "report_preview",
    "fieldtype": "HTML",
+   "is_virtual": 1,
    "label": "Report Preview"
   },
   {
    "fieldname": "pdf_preview",
    "fieldtype": "HTML",
+   "is_virtual": 1,
    "label": "PDF Preview"
   },
   {
@@ -102,12 +102,28 @@
    "in_list_view": 1,
    "label": "Details",
    "reqd": 1
+  },
+  {
+   "fieldname": "bug_category",
+   "fieldtype": "Select",
+   "label": "Bug Category",
+   "options": "UI\nBusiness Logic\nData\nReports\nPerformance\nIntegration\nPermissions\nSystem / Technical"
+  },
+  {
+   "fieldname": "section_break_zakf",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "impact_area",
+   "fieldtype": "Table",
+   "label": "Impact Area",
+   "options": "SigmaCore Module Scope Child Table"
   }
  ],
  "grid_page_length": 50,
  "is_submittable": 1,
  "links": [],
- "modified": "2026-04-10 19:23:45.225382",
+ "modified": "2026-04-25 15:06:42.519456",
  "modified_by": "Administrator",
  "module": "Go-Smart SigmaCore",
  "name": "SigmaCore Bug Report",

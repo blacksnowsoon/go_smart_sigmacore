@@ -1,0 +1,154 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:PTR-{MM}-{#####}",
+ "creation": "2026-04-25 15:22:58.437242",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_ohcl",
+  "amended_from",
+  "patch_version",
+  "column_break_tvgx",
+  "cr",
+  "bug_report",
+  "section_break_htrs",
+  "details",
+  "preview_tab",
+  "report_preview",
+  "pdf_tab",
+  "pdf_view"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_ohcl",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "SigmaCore Patch Test Report",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "patch_version",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Patch Version",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_tvgx",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "cr",
+   "fieldtype": "Link",
+   "label": "CR ",
+   "options": "SigmaCore CR"
+  },
+  {
+   "fieldname": "bug_report",
+   "fieldtype": "Link",
+   "label": "Bug Report",
+   "options": "SigmaCore Bug Report"
+  },
+  {
+   "fieldname": "preview_tab",
+   "fieldtype": "Tab Break",
+   "label": "Preview"
+  },
+  {
+   "fieldname": "report_preview",
+   "fieldtype": "HTML",
+   "is_virtual": 1,
+   "label": "Report Preview"
+  },
+  {
+   "fieldname": "pdf_tab",
+   "fieldtype": "Tab Break",
+   "label": "PDF"
+  },
+  {
+   "fieldname": "pdf_view",
+   "fieldtype": "HTML",
+   "is_virtual": 1,
+   "label": "PDF View"
+  },
+  {
+   "fieldname": "section_break_htrs",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "details",
+   "fieldtype": "Text Editor",
+   "in_list_view": 1,
+   "label": "Details",
+   "reqd": 1
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2026-04-25 15:32:53.498893",
+ "modified_by": "Administrator",
+ "module": "Go-Smart SigmaCore",
+ "name": "SigmaCore Patch Test Report",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "amend": 1,
+   "cancel": 1,
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "SigmaCore BA",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "amend": 1,
+   "cancel": 1,
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "SigmaCore PM",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

@@ -1,0 +1,144 @@
+<style>
+	.sc-preview-wrapper {
+		font-family: var(--font-stack, 'Inter', sans-serif);
+		padding: 24px 28px;
+		color: var(--text-color, #1a1a2e);
+	}
+	.sc-header {
+		display: flex;
+		align-items: flex-start;
+		justify-content: space-between;
+		margin-bottom: 28px;
+		padding-bottom: 18px;
+		border-bottom: 2px solid var(--border-color, #e2e8f0);
+	}
+	.sc-title {
+		font-size: 1.6rem;
+		font-weight: 700;
+		color: var(--heading-color, #1e3a5f);
+		margin: 0 0 6px;
+	}
+	.sc-meta {
+		font-size: 0.82rem;
+		color: var(--text-muted, #64748b);
+		display: flex;
+		gap: 18px;
+		flex-wrap: wrap;
+	}
+	.sc-meta span { display: flex; align-items: center; gap: 4px; }
+	.sc-status-badge {
+		display: inline-block;
+		padding: 3px 12px;
+		border-radius: 999px;
+		font-size: 0.78rem;
+		font-weight: 600;
+		background: var(--primary-color, #4f46e5);
+		color: #fff;
+	}
+	.backlog {background: #1490f5;}
+	.in-progress {background: #0cb932;}
+	.in-test-env {background: #fbbf24;}
+	.solved {background: #3b82f6;}
+	.cancelled {background: #6b7280;}
+	.sc-section { margin-bottom: 28px; }
+	.sc-section-title {
+		font-size: 1.3rem;
+		font-weight: 700;
+		letter-spacing: 0.12em;
+		text-transform: uppercase;
+		color: var(--text-muted, #596370);
+		margin-bottom: 10px;
+	}
+	.sc-badges-list { display: flex; flex-wrap: wrap; gap: 8px; }
+	.sc-badge {
+		background: var(--bg-blue-light, #eff6ff);
+		color: var(--blue-500, #3b82f6);
+		border: 1px solid var(--blue-200, #bfdbfe);
+		border-radius: 999px;
+		padding: 4px 14px;
+		font-size: 0.85rem;
+		font-weight: 500;
+	}
+	.sc-scopes-list { display: flex; flex-direction: column; gap: 6px; }
+	.sc-scope-row {
+		background: var(--control-bg, #f8fafc);
+		border: 1px solid var(--border-color, #e2e8f0);
+		border-radius: 6px;
+		padding: 8px 14px;
+		font-size: 0.88rem;
+		color: var(--text-color, #334155);
+	}
+	.sc-detail-block {
+		border-left: 3px solid var(--primary-color, #4f46e5);
+		padding: 10px 16px;
+		margin-bottom: 16px;
+		background: var(--control-bg, #f8fafc);
+		border-radius: 0 6px 6px 0;
+	}
+	.sc-detail-content {
+		font-size: 0.875rem;
+		color: var(--text-color, #475569);
+		margin: 0;
+		white-space: pre-wrap;
+	}
+</style>
+
+<div class="sc-preview-wrapper">
+
+	{# ── Header ─────────────────────────────────────────────── #}
+	<div class="sc-header">
+		<div>
+			<h1 class="sc-title">{{ doc.title or doc.name or "—" }}</h1>
+			<h3 style="margin-top: 0; color: #0a53a7dc; border-bottom: 2px solid #1a73e8; padding-bottom: 10px;">
+				<i class="fa fa-eye"></i> {{ _('Preview') }}
+			</h3>
+			<div class="sc-meta">
+				<span>🐛 {{ doc.name }}</span>
+				{% if doc.priority %}<span>
+					{% if doc.priority == "High" %}
+						🔺 
+					{% elif doc.priority == "Medium" %}
+						🟠 
+					{% elif doc.priority == "Heigh" %}
+						🔺 
+					{% elif doc.priority == "Low" %}
+						🟢 
+					{% elif doc.priority == "Critical" %}
+						🔴 
+					{% endif %}
+					{{ _(doc.priority) }}</span>{% endif %}
+				{% if doc.site %}<span>🏢 {{ frappe.get_doc("SigmaCore Site", doc.site).site_name }}</span>{% endif %}
+				{% if doc.bug_category %}<span>📂 {{ _(doc.bug_category) }}</span>{% endif %}
+			</div>
+		</div>
+	</div>
+
+	{# ── Impact Areas ────────────────────────────────────────── #}
+	{% if doc.impact_area %}
+	<div class="sc-section">
+		<div class="sc-section-title">{{ _("Impact Area") }}</div>
+		<div class="sc-scopes-list">
+			{% for row in doc.impact_area %}
+			<div class="sc-scope-row">
+				{% set parts = [] %}
+				{% if row.module_name %}{% set _ = parts.append(row.module_name) %}{% endif %}
+				{% if row.section %}{% set _ = parts.append(row.section) %}{% endif %}
+				{% if row.target %}{% set _ = parts.append(row.target) %}{% endif %}
+				{{ parts | join(' / ') if parts else "—" }}
+			</div>
+			{% endfor %}
+		</div>
+	</div>
+	{% endif %}
+
+	{# ── Details ────────────────────────────────────────── #}
+	{% if doc.details %}
+	<div class="sc-section">
+		<div class="sc-section-title">{{ _("Details") }}</div>
+		<div class="sc-detail-block">
+			<p class="sc-detail-content">{{ doc.details }}</p>
+		</div>
+	</div>
+	{% endif %}
+
+</div>

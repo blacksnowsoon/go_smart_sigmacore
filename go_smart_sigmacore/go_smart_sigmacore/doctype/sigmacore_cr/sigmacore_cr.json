@@ -63,7 +63,8 @@
   {
    "fieldname": "title",
    "fieldtype": "Data",
-   "label": "Title"
+   "label": "Title",
+   "reqd": 1
   },
   {
    "fieldname": "column_break_xtyy",
@@ -202,7 +203,7 @@
    "fieldname": "status",
    "fieldtype": "Select",
    "label": "Status",
-   "options": "Backlog\nUnder Technical Review\nIn Progress\nIn Test Env\nClosed\nRejected",
+   "options": "Backlog\nUnder Technical Review\nIn Progress\nIn Test Env\nClosed\nCancelled",
    "read_only": 1
   },
   {
@@ -253,7 +254,7 @@
  "grid_page_length": 50,
  "is_submittable": 1,
  "links": [],
- "modified": "2026-04-19 13:17:36.976654",
+ "modified": "2026-04-24 14:47:47.594140",
  "modified_by": "Administrator",
  "module": "Go-Smart SigmaCore",
  "name": "SigmaCore CR",
@@ -271,6 +272,34 @@
    "read": 1,
    "report": 1,
    "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "SigmaCore BA",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "amend": 1,
+   "cancel": 1,
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "SigmaCore PM",
    "share": 1,
    "submit": 1,
    "write": 1
