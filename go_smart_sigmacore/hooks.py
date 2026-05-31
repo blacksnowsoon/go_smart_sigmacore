@@ -7,7 +7,28 @@ app_license = "mit"
 
 # Apps
 # ------------------
-
+fixtures = [
+	{
+		"dt": "Custom DocPerm",
+		"filters": {
+			"role": ["in", [
+				"SigmaCore PM",
+				"SigmaCore BA",
+				"SigmaCore Developer",
+				"SigmaCore Module Lead",
+				"SigmaCore Modules Manager"
+			]]
+		}
+	},
+	{
+		"dt": "Workflow",
+		"filters": {
+			"name": ["in", [
+				"SigmaCore CR Workflow"
+			]]
+		}
+	}
+]
 # required_apps = []
 
 # Each item in the list will be shown as an app in the apps page

@@ -1,0 +1,63 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:{#####}",
+ "creation": "2026-04-25 16:17:38.514205",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "requirement_id",
+  "requirement_description",
+  "notes",
+  "status"
+ ],
+ "fields": [
+  {
+   "fieldname": "requirement_id",
+   "fieldtype": "Link",
+   "hidden": 1,
+   "in_list_view": 1,
+   "label": "Requirement ID",
+   "options": "SigmaCore Requirement"
+  },
+  {
+   "columns": 4,
+   "fieldname": "requirement_description",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Requirement Description",
+   "read_only": 1
+  },
+  {
+   "columns": 2,
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "Passed\nPartly Passed\nFailed\nBlocked"
+  },
+  {
+   "columns": 3,
+   "fieldname": "notes",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Notes"
+  }
+ ],
+ "grid_page_length": 20,
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2026-04-25 22:06:48.170186",
+ "modified_by": "Administrator",
+ "module": "Go-Smart SigmaCore",
+ "name": "SigmaCore Patch Test Item",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

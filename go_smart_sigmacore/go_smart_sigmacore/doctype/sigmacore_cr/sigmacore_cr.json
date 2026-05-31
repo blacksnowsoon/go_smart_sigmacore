@@ -254,11 +254,11 @@
  "grid_page_length": 50,
  "is_submittable": 1,
  "links": [],
- "modified": "2026-04-24 14:47:47.594140",
+ "modified": "2026-05-31 11:54:22.428441",
  "modified_by": "Administrator",
  "module": "Go-Smart SigmaCore",
  "name": "SigmaCore CR",
- "naming_rule": "Expression",
+ "naming_rule": "Expression (old style)",
  "owner": "Administrator",
  "permissions": [
   {
@@ -309,32 +309,7 @@
  "show_title_field_in_link": 1,
  "sort_field": "modified",
  "sort_order": "DESC",
- "states": [
-  {
-   "color": "Red",
-   "title": "Backlog"
-  },
-  {
-   "color": "Yellow",
-   "title": "Under Technical Review"
-  },
-  {
-   "color": "Green",
-   "title": "In Progress"
-  },
-  {
-   "color": "Orange",
-   "title": "In Test Env"
-  },
-  {
-   "color": "Blue",
-   "title": "Closed"
-  },
-  {
-   "color": "Gray",
-   "title": "Rejected"
-  }
- ],
+ "states": [],
  "title_field": "title",
  "track_changes": 1
 }
