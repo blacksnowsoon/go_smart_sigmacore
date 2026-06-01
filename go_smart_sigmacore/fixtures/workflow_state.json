@@ -1,0 +1,191 @@
+[
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "question-sign",
+  "modified": "2024-08-21 19:43:14.289382",
+  "name": "Pending",
+  "style": "",
+  "workflow_state_name": "Pending"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2024-10-21 13:02:26.999631",
+  "name": "Reserved",
+  "style": "",
+  "workflow_state_name": "Reserved"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2024-10-21 13:02:36.779081",
+  "name": "Checked In",
+  "style": "",
+  "workflow_state_name": "Checked In"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2024-10-21 13:06:43.447471",
+  "name": "First Weight",
+  "style": "",
+  "workflow_state_name": "First Weight"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2024-10-21 13:06:51.978347",
+  "name": "Second Weight",
+  "style": "",
+  "workflow_state_name": "Second Weight"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2024-10-21 13:09:32.971411",
+  "name": "Payment",
+  "style": "",
+  "workflow_state_name": "Payment"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2024-10-21 13:11:27.668131",
+  "name": "Check Out",
+  "style": "",
+  "workflow_state_name": "Check Out"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2024-10-21 13:22:13.967110",
+  "name": "Loading Or Unloading",
+  "style": "",
+  "workflow_state_name": "Loading Or Unloading"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2024-10-21 13:25:40.435759",
+  "name": "Casher",
+  "style": "",
+  "workflow_state_name": "Casher"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2024-10-21 13:28:21.662463",
+  "name": "U-Turn",
+  "style": "",
+  "workflow_state_name": "U-Turn"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2026-03-19 23:23:32.137558",
+  "name": "Cancelled",
+  "style": "",
+  "workflow_state_name": "Cancelled"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2026-03-20 02:53:28.385617",
+  "name": "Pending PM Action",
+  "style": "",
+  "workflow_state_name": "Pending PM Action"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2026-04-10 19:15:34.342368",
+  "name": "Solved",
+  "style": "",
+  "workflow_state_name": "Solved"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2026-03-19 23:08:09.905572",
+  "name": "Backlog",
+  "style": "",
+  "workflow_state_name": "Backlog"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "ok-sign",
+  "modified": "2024-08-21 19:43:14.296109",
+  "name": "Approved",
+  "style": "Success",
+  "workflow_state_name": "Approved"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "remove",
+  "modified": "2024-08-21 19:43:14.303006",
+  "name": "Rejected",
+  "style": "Danger",
+  "workflow_state_name": "Rejected"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2026-03-19 23:16:50.114121",
+  "name": "Closed",
+  "style": "",
+  "workflow_state_name": "Closed"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2026-03-19 23:22:50.842773",
+  "name": "In Test Env",
+  "style": "",
+  "workflow_state_name": "In Test Env"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2026-03-19 23:15:44.596426",
+  "name": "Under Technical Review",
+  "style": "",
+  "workflow_state_name": "Under Technical Review"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2026-03-19 23:16:35.511032",
+  "name": "In Progress",
+  "style": "",
+  "workflow_state_name": "In Progress"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2026-03-19 23:15:59.405563",
+  "name": "Pending Approval",
+  "style": "",
+  "workflow_state_name": "Pending Approval"
+ }
+]
