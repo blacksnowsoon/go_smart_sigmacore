@@ -1,0 +1,128 @@
+{
+ "charts": [],
+ "content": "[{\"id\":\"bVQy2MD7Cg\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">SigmaCore</span>\",\"col\":12}},{\"id\":\"g2RDwnKP_d\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Activity</b></span>\",\"col\":12}},{\"id\":\"ZRDg4rQrUZ\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Create CR\",\"col\":3}},{\"id\":\"Q7ExCuDK16\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"CR's List\",\"col\":3}},{\"id\":\"bcvZJZC4fa\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"Kt9UV-OvP8\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Create a Bug Report\",\"col\":3}},{\"id\":\"YQzhK4aD4D\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Bug Report List\",\"col\":3}},{\"id\":\"8wh9RzsVvr\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"0AyXUdnCA-\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Create Patch Test Report\",\"col\":3}},{\"id\":\"RSsZ1ZO5YU\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Patch Test Report List\",\"col\":3}},{\"id\":\"wraIvyM20M\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"Sz0_X79kZu\",\"type\":\"card\",\"data\":{\"card_name\":\"Masters\",\"col\":4}}]",
+ "creation": "2026-02-25 17:15:20.367543",
+ "custom_blocks": [],
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "for_user": "",
+ "hide_custom": 0,
+ "icon": "workflow",
+ "idx": 0,
+ "indicator_color": "",
+ "is_hidden": 0,
+ "label": "SigmaCore",
+ "links": [
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Masters",
+   "link_count": 4,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Settings",
+   "link_count": 0,
+   "link_to": "SigmaCore Settings",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Sites",
+   "link_count": 0,
+   "link_to": "SigmaCore Site",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Stakeholders",
+   "link_count": 0,
+   "link_to": "SigmaCore Stakeholder",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Modules",
+   "link_count": 0,
+   "link_to": "SigmaCore Module",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  }
+ ],
+ "modified": "2026-06-01 11:46:42.631333",
+ "modified_by": "Administrator",
+ "module": "Go-Smart SigmaCore",
+ "name": "SigmaCore",
+ "number_cards": [],
+ "owner": "Administrator",
+ "parent_page": "",
+ "public": 1,
+ "quick_lists": [],
+ "roles": [],
+ "sequence_id": 24.0,
+ "shortcuts": [
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "CR's List",
+   "link_to": "SigmaCore CR",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "New",
+   "label": "Create Patch Test Report",
+   "link_to": "SigmaCore Patch Test Report",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "New",
+   "label": "Create a Bug Report",
+   "link_to": "SigmaCore Bug Report",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Red",
+   "doc_view": "New",
+   "label": "Create CR",
+   "link_to": "SigmaCore CR",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Patch Test Report List",
+   "link_to": "SigmaCore Patch Test Report",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Bug Report List",
+   "link_to": "SigmaCore Bug Report",
+   "stats_filter": "[]",
+   "type": "DocType"
+  }
+ ],
+ "title": "SigmaCore"
+}
