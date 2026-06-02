@@ -12,6 +12,7 @@
   "column_break_tvgx",
   "cr",
   "bug_report",
+  "column_break_khtg",
   "section_break_htrs",
   "details",
   "preview_tab",
@@ -89,17 +90,21 @@
    "in_list_view": 1,
    "label": "Details",
    "reqd": 1
+  },
+  {
+   "fieldname": "column_break_khtg",
+   "fieldtype": "Column Break"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2026-04-25 15:32:53.498893",
+ "modified": "2026-06-02 17:27:36.699308",
  "modified_by": "Administrator",
  "module": "Go-Smart SigmaCore",
  "name": "SigmaCore Patch Test Report",
- "naming_rule": "Expression",
+ "naming_rule": "Expression (old style)",
  "owner": "Administrator",
  "permissions": [
   {

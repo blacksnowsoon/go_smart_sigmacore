@@ -111,6 +111,33 @@
   "docstatus": 0,
   "doctype": "Workflow State",
   "icon": "",
+  "modified": "2026-06-02 11:31:54.014547",
+  "name": "In Development",
+  "style": "",
+  "workflow_state_name": "In Development"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2026-06-02 11:33:00.014000",
+  "name": "Deployed to Test Env",
+  "style": "",
+  "workflow_state_name": "Deployed to Test Env"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2026-06-02 11:33:27.421091",
+  "name": "Deployed to Production",
+  "style": "",
+  "workflow_state_name": "Deployed to Production"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
   "modified": "2026-04-10 19:15:34.342368",
   "name": "Solved",
   "style": "",
