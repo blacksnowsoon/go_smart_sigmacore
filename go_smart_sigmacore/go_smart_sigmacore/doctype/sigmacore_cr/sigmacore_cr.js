@@ -48,14 +48,20 @@ frappe.ui.form.on("SigmaCore CR", {
 			render_pdf_view(frm)
 		})
 		if (frm.is_new()) {
-            
+            frm.set_df_property("patch_number", "hidden", 1)
+			
             frm.fields_dict.scopes.grid.update_docfield_property(
                 "section", "read_only", 1
             );
              frm.fields_dict.scopes.grid.update_docfield_property(
                 "target", "read_only", 1
             );
-        }
+        } else {
+			if (frm.doc.status === "In Progress" || frm.doc.status === "In Test Env") {
+				frm.set_df_property("patch_number", "hidden", 0)
+				frm.set_df_property("patch_number", "reqd", 1)
+			}
+		}
 	},
 });
 

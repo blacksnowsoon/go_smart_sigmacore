@@ -16,6 +16,7 @@
   "status",
   "priority",
   "column_break_ajht",
+  "patch_number",
   "section_break_uulx",
   "title",
   "section_break_fzxp",
@@ -251,12 +252,17 @@
    "fieldtype": "Small Text",
    "label": "Objective",
    "reqd": 1
+  },
+  {
+   "fieldname": "patch_number",
+   "fieldtype": "Data",
+   "label": "Patch Number"
   }
  ],
  "grid_page_length": 50,
  "is_submittable": 1,
  "links": [],
- "modified": "2026-05-31 14:55:43.081882",
+ "modified": "2026-06-02 10:19:12.867378",
  "modified_by": "Administrator",
  "module": "Go-Smart SigmaCore",
  "name": "SigmaCore CR",

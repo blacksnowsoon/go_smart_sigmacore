@@ -40,12 +40,24 @@ frappe.ui.form.on("SigmaCore Bug Report", {
         
     },
 	refresh(frm) {
+		
 		frm.fields_dict["report_preview"].tab.tab_link.on("click", () => {
 			render_bug_report_preview(frm);
 		});
 		frm.fields_dict["pdf_preview"].tab.tab_link.on("click", () => {
 			render_pdf_view(frm)
 		})
+		if (frm.is_new()) {
+            
+            frm.fields_dict.impact_area.grid.update_docfield_property(
+                "section", "read_only", 1
+            );
+             frm.fields_dict.impact_area.grid.update_docfield_property(
+                "target", "read_only", 1
+            );
+        } else {
+			
+		}
 	},
 });
 
