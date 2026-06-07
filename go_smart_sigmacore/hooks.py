@@ -25,7 +25,8 @@ fixtures = [
 		"dt": "Workflow",
 		"filters": {
 			"name": ["in", [
-				"SigmaCore CR Workflow"
+				"SigmaCore CR Workflow",
+				"SigmaCore Bug Report workflow"
 			]]
 		}
 	}
