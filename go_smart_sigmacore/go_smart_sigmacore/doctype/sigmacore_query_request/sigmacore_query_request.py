@@ -5,5 +5,5 @@
 from frappe.model.document import Document
 
 
-class SigmaCoreRequirement(Document):
+class SigmaCoreQueryRequest(Document):
 	pass

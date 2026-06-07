@@ -1,6 +1,6 @@
 {
  "charts": [],
- "content": "[{\"id\":\"bVQy2MD7Cg\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">SigmaCore</span>\",\"col\":12}},{\"id\":\"g2RDwnKP_d\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Activity</b></span>\",\"col\":12}},{\"id\":\"ZRDg4rQrUZ\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Create CR\",\"col\":3}},{\"id\":\"Q7ExCuDK16\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"CR's List\",\"col\":3}},{\"id\":\"bcvZJZC4fa\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"Kt9UV-OvP8\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Create a Bug Report\",\"col\":3}},{\"id\":\"YQzhK4aD4D\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Bug Report List\",\"col\":3}},{\"id\":\"8wh9RzsVvr\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"0AyXUdnCA-\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Create Patch Test Report\",\"col\":3}},{\"id\":\"RSsZ1ZO5YU\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Patch Test Report List\",\"col\":3}},{\"id\":\"wraIvyM20M\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"Sz0_X79kZu\",\"type\":\"card\",\"data\":{\"card_name\":\"Masters\",\"col\":4}}]",
+ "content": "[{\"id\":\"bVQy2MD7Cg\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">SigmaCore</span>\",\"col\":12}},{\"id\":\"ZRDg4rQrUZ\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Create CR\",\"col\":3}},{\"id\":\"Q7ExCuDK16\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"CR's List\",\"col\":3}},{\"id\":\"x5SNB4R20v\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"ToDo\",\"col\":3}},{\"id\":\"bcvZJZC4fa\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"Kt9UV-OvP8\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Create a Bug Report\",\"col\":3}},{\"id\":\"YQzhK4aD4D\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Bug Report List\",\"col\":3}},{\"id\":\"8wh9RzsVvr\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"0AyXUdnCA-\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Create Patch Test Report\",\"col\":3}},{\"id\":\"RSsZ1ZO5YU\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Patch Test Report List\",\"col\":3}},{\"id\":\"wraIvyM20M\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"o1cRKzd8Ai\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Create Query Request\",\"col\":3}},{\"id\":\"KO0sfE10si\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Query Request List\",\"col\":3}},{\"id\":\"oFCu3RhRaX\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"Sz0_X79kZu\",\"type\":\"card\",\"data\":{\"card_name\":\"Masters\",\"col\":3}}]",
  "creation": "2026-02-25 17:15:20.367543",
  "custom_blocks": [],
  "docstatus": 0,
@@ -63,7 +63,7 @@
    "type": "Link"
   }
  ],
- "modified": "2026-06-01 11:46:42.631333",
+ "modified": "2026-06-06 22:31:43.379428",
  "modified_by": "Administrator",
  "module": "Go-Smart SigmaCore",
  "name": "SigmaCore",
@@ -93,9 +93,25 @@
   },
   {
    "color": "Grey",
+   "doc_view": "List",
+   "label": "ToDo",
+   "link_to": "ToDo",
+   "stats_filter": "[[\"ToDo\",\"reference_type\",\"=\",\"SigmaCore CR\",false]]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
    "doc_view": "New",
    "label": "Create a Bug Report",
    "link_to": "SigmaCore Bug Report",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "New",
+   "label": "Create Query Request",
+   "link_to": "SigmaCore Query Request",
    "stats_filter": "[]",
    "type": "DocType"
   },
@@ -120,6 +136,14 @@
    "doc_view": "List",
    "label": "Bug Report List",
    "link_to": "SigmaCore Bug Report",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Query Request List",
+   "link_to": "SigmaCore Query Request",
    "stats_filter": "[]",
    "type": "DocType"
   }
