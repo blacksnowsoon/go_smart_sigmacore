@@ -9,6 +9,7 @@ app_license = "mit"
 # ------------------
 fixtures = [
 	"Workflow State",
+	"Workflow Action Master",
 	{
 		"dt": "Custom DocPerm",
 		"filters": {
